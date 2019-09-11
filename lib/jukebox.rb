@@ -25,7 +25,7 @@ def play(songs)
  song_numbers=(1..9)
   song_names=songs
  puts "Please enter a song name or number:"
- users_response=gets.stripsa
+ users_response=gets.strip
  case users_response
  when full_name
    puts "Playing #{song_names}"
@@ -111,7 +111,7 @@ end
 #   exit_jukebox
 # end
 # end
-   # 
+   #
    #
   #  def list(songs)
   #    songs.each_with_index do |song_name, i|
