@@ -18,26 +18,46 @@ puts "- play : lets you choose a song to play"
 puts "- exit : exits this program"
 end
 #
-# def play(songs)
-#  number_not_listed="12323"
-#  full_name="Phoenix - 1901"
-#  invalid_response = "Blah blah foo blah"
-#  song_numbers=("1".."9")
-#   song_names=songs
-#  puts "Please enter a song name or number:"
-#  users_response=gets.strip
-#  case users_response
-#  when full_name
-#    puts "Playing #{song_names}"
-#  when song_numbers
-#    puts "Playing #{song_names}"
-#  when invalid_response
-#    puts "Invalid input, please try again"
-#  when number_not_listed
-#     puts "Invalid input, please try again"
-#  end
-# end
-#
+def play(songs)
+ number_not_listed="12323"
+ full_name="Phoenix - 1901"
+ invalid_response = "Blah blah foo blah"
+ song_numbers=("1".."9")
+  song_names=songs
+ puts "Please enter a song name or number:"
+ users_response=gets.strip
+ case users_response
+ when full_name
+   puts "Playing #{song_names}"
+ when song_numbers
+   puts "Playing #{song_names}"
+ when invalid_response
+   puts "Invalid input, please try again"
+ when number_not_listed
+    puts "Invalid input, please try again"
+ end
+end
+
+
+
+def play(songs)
+  puts "Please enter a song name or number:"
+  song_to_play = gets.chomp
+  if songs.include?(song_to_play)
+    puts "Playing #{song_to_play}"
+  else if (1...9).to_a.include?(song_to_play.to_i)
+    puts "Playing #{songs[song_to_play.to_i - 1]}"
+  else
+    puts "Invalid input, please try again"
+  end
+end
+end
+
+def exit_jukebox
+  puts "Goodbye"
+end
+
+
 # def list(songs)
 # songs.each_with_index {|song,index|index+=1
 #    puts "#{index}. ""#{song}"
