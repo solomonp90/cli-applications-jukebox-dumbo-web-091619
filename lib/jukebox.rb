@@ -63,7 +63,7 @@ when help_user
 when list_songs
   list(songs)
 when play_music
-play(songs[user_input])
+play(songs[0])
 end
 end
 
