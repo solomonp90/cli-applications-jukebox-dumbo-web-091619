@@ -25,9 +25,9 @@ def play(songs)
  song_numbers=("1".."9")
   song_names=songs
  puts "Please enter a song name or number:"
- users_response=gets.strip
+ users_response=gets.stripsa
  case users_response
- when full_name
+ when full_namez
    puts "Playing #{song_names}"
  when song_numbers
    puts "Playing #{song_names}"
