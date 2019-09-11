@@ -22,7 +22,7 @@ def play(songs)
  number_not_listed="12323"
  full_name="Phoenix - 1901"
  invalid_response = "Blah blah foo blah"
- song_numbers=(1..9)
+ song_numbers=("1".."9")
   song_names=songs
  puts "Please enter a song name or number:"
  users_response=gets.strip
@@ -63,7 +63,7 @@ when help_user
 when list_songs
   list(songs)
 when play_music
-play(songs[0])
+play(songs[0..9])
 end
 end
 
